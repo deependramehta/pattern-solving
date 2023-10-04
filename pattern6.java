@@ -4,11 +4,10 @@ class pattern6 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int originalN = n;
-        n = 2 * n - 2;
-        for (int i = 0; i <= n; i++) {
-            for (int j = 0; j <= n; j++) {
-                int index = originalN - Math.min(Math.min(i, j), Math.min(n - i, n - j));
+        int N = n;
+        for (int i = 0; i <= 2*n-2; i++) {
+            for (int j = 0; j <= 2*n-2; j++) {
+                int index = N - Math.min(Math.min(i, j), Math.min(2*n-2 - i, 2*n-2 - j));
                 System.out.print(index + " ");
             }
             System.out.println();
